@@ -1,0 +1,3 @@
+<div *ngFor="let post of _posts">
+<h3><a [routerLink]="['/posts',post.id]" [queryParams]="{title:post.title}">{{post.title}}</a></h3>
+</div>
