@@ -1,0 +1,43 @@
+<div>
+<form  #form="ngForm" (ngSubmit)="SubmitUserDetailsHandler(form)">
+<table>
+<tr>
+<td><label for="Name">Name</label></td>
+<td><input type="text" name="Name" ngModel></td>
+</tr>
+<tr>
+<td><label for="Gender">Gender</label></td>
+<td>
+<input type="radio" name="Gender" value="male" checked> Male<br>
+<input type="radio" name="Gender" value="female"> Female<br>
+<input type="radio" name="Gender" value="other"> Other  
+</td>
+</tr>
+<tr>
+<td><label for="Hobbies">Hobbies</label></td>
+<td>
+<select name="Hobbies" ngModel>
+<option value="Badminton">Badminton</option>
+<option value="Cycle">Cycle</option>
+</select> 
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<div ngModelGroup="contact" #contact=ngModelGroup>
+<label for="StreetAddress1">StreetAddress1</label>
+<input type="text" ngModel name="StreetAddress1" />
+<label for="StreetAddress2">StreetAddress2</label>
+<input type="text" ngModel name="StreetAddress2" />
+</div>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<button type="submit">Submit</button>
+</td>
+</tr>
+</table>
+
+</form>
+</div>
