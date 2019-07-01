@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="FormSubmit()">
+<label for="username" >Username</label>
+<input type="text" formControlName="Username" />
+<div *ngIf="form.controls['Username'].pending">
+Checking...
+</div>
+<div *ngIf="form.controls['Username'].errors">
+ <div *ngIf="form.controls['Username'].errors.Username">
+ User Name Already Exists
+ </div>
+</div>
+<label for="password" >Password</label>
+<input type="text" formControlName="Password" />
+<button type="submit" [disabled]="!form.valid">Submit</button>
+</form>
